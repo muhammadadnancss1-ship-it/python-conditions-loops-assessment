@@ -1,0 +1,147 @@
+[
+  {
+    "path": "SUBMISSION_NOTES.md",
+    "size_bytes": 3528,
+    "sha256": "c1baa99ed78c8c93409e4a27cd73ddd4ddca60f7912bdc45dc80ed2b07bc7b2c"
+  },
+  {
+    "path": "previews/README-preview-dark.html",
+    "size_bytes": 129313,
+    "sha256": "3f4d4f395836db592c63f6c456f21948f7ec29c6793f706e26a400ee0942498c"
+  },
+  {
+    "path": "previews/README-preview-light.html",
+    "size_bytes": 129315,
+    "sha256": "1b357947d3853d6e0de2d23d3cf009ecc1deb3753398317efb634aa49a81a430"
+  },
+  {
+    "path": "python-conditions-loops-assessment/README.md",
+    "size_bytes": 33848,
+    "sha256": "9539e18b3bcde3117ee3fcbb038d632b49f92f2e3f165e3d83e0c7ba876f3543"
+  },
+  {
+    "path": "python-conditions-loops-assessment/assets/banner.png",
+    "size_bytes": 68027,
+    "sha256": "b946791bb17438f97e897b1d87b6829d84ef2f1060f6a6f41c88fdd49529306b"
+  },
+  {
+    "path": "python-conditions-loops-assessment/assets/banner.svg",
+    "size_bytes": 4319,
+    "sha256": "ff768a5c2207bf4ce0618e04bb64afb911dcd711680a6ab9a59ddde3c0241731"
+  },
+  {
+    "path": "python-conditions-loops-assessment/assets/overview.png",
+    "size_bytes": 136694,
+    "sha256": "b360206c43566b8b510aaf262c112edbad35656ef86873c0f8f2662dbce7975c"
+  },
+  {
+    "path": "python-conditions-loops-assessment/assets/overview.svg",
+    "size_bytes": 7925,
+    "sha256": "08c8b7010fc2025ec8deaafb07926b63db09dfa4bc21b0a51269ac22db57ea30"
+  },
+  {
+    "path": "python-conditions-loops-assessment/assets/pharmacy_inventory_system_flow.png",
+    "size_bytes": 297489,
+    "sha256": "7a79afc0e7cb1d9d0b72e681ad7e65c3a9f951b8b24da58f0448c787ea55a3b4"
+  },
+  {
+    "path": "python-conditions-loops-assessment/assets/pharmacy_inventory_system_flow.svg",
+    "size_bytes": 17545,
+    "sha256": "3a99f2e0eea796507951c318e18bbb3055977088c42ebd9e87d2b12f34bf0a98"
+  },
+  {
+    "path": "python-conditions-loops-assessment/assets/student_scholarship_system_flow.png",
+    "size_bytes": 230829,
+    "sha256": "4939128137ed833efef1d4e7ac28385fb58ceeed257a65c0a2cd25614fbbadd8"
+  },
+  {
+    "path": "python-conditions-loops-assessment/assets/student_scholarship_system_flow.svg",
+    "size_bytes": 13823,
+    "sha256": "50e52eb174b31a185731694d9339b24a633691e905fdc41845a77d80c5a63350"
+  },
+  {
+    "path": "python-conditions-loops-assessment/assets/uml_diagram.png",
+    "size_bytes": 152657,
+    "sha256": "ad69725ce1962ca56226e93cf6b5c77f988b6c61500ee0620c6c6138856bbd43"
+  },
+  {
+    "path": "python-conditions-loops-assessment/assets/uml_diagram.svg",
+    "size_bytes": 7490,
+    "sha256": "28452b722bf1961e1aebf5c7ab673eccbfb77d3e862cbc79c975c24e71648024"
+  },
+  {
+    "path": "python-conditions-loops-assessment/pharmacy_inventory_system.py",
+    "size_bytes": 3043,
+    "sha256": "dc933826677cd9dfd2d162830bd378e1ad713e4f1626c89c4f0517928aedd5ad"
+  },
+  {
+    "path": "python-conditions-loops-assessment/student_scholarship_system.py",
+    "size_bytes": 2486,
+    "sha256": "cd2c8a690392f714d81c65f2296e54b06346f658d22cbc1b9e50c3378d9437ab"
+  },
+  {
+    "path": "verification/P02-terminal.txt",
+    "size_bytes": 1436,
+    "sha256": "00f5387d20ee456eb625520b9b54c1e2e4a5d9d400efc3be2f0954cd4bf7d6ab"
+  },
+  {
+    "path": "verification/P06-terminal.txt",
+    "size_bytes": 551,
+    "sha256": "25bb582055e0025ecc713fb8f166245c713cea8f95cd6b5952db81872c23e5c2"
+  },
+  {
+    "path": "verification/P23-terminal.txt",
+    "size_bytes": 681,
+    "sha256": "6b3a2faf21616cbcd04fa0451ed212c35ea78b07430ebaa7455bf35c014b06fd"
+  },
+  {
+    "path": "verification/README.md",
+    "size_bytes": 2801,
+    "sha256": "a1c0f4154cb947d4fc4119a6c43ebbaa38486090907d3e2d2a27f1ea1ccab011"
+  },
+  {
+    "path": "verification/S02-terminal.txt",
+    "size_bytes": 400,
+    "sha256": "344645890eb3eecfc2d4314fb636928ba9955b46c03f2cf9aa653af14cbdb806"
+  },
+  {
+    "path": "verification/S04-terminal.txt",
+    "size_bytes": 404,
+    "sha256": "127d7cd603f36f01e2e22f878b57e8d38753661206bb06c93f7d2cae14c5f0e1"
+  },
+  {
+    "path": "verification/S06-terminal.txt",
+    "size_bytes": 397,
+    "sha256": "b2ca0647e7ceacc7061588a37033db672849258c37de0e87137e8d113c872ff6"
+  },
+  {
+    "path": "verification/artifact-validation.json",
+    "size_bytes": 2471,
+    "sha256": "da05556d82dc0800d528fec4ff3bbd61def1980393ac36774be9e3646cb2b784"
+  },
+  {
+    "path": "verification/run_tests.py",
+    "size_bytes": 3667,
+    "sha256": "4bb73e55188506f8ee18b3630625ac8b1cb465bf98da9d1748127f818f73c795"
+  },
+  {
+    "path": "verification/source-integrity.json",
+    "size_bytes": 455,
+    "sha256": "5a5484a5e73eb637f8bb23c4810b423f57f1e0c7bcdf3a6d1d43cc08ea0446f1"
+  },
+  {
+    "path": "verification/test-cases.json",
+    "size_bytes": 36633,
+    "sha256": "ad50a3b8dee654d84fdf55143f57868db283a5dd4af4994e4ceaa571e71728f0"
+  },
+  {
+    "path": "verification/test-results.csv",
+    "size_bytes": 10580,
+    "sha256": "e5b14afe4919d527efcc7aa5227498fe3b5c32505f86b0a05f0d1d504b84c83b"
+  },
+  {
+    "path": "verification/test-results.json",
+    "size_bytes": 93642,
+    "sha256": "71ccedb1a33383ca04c63a6c967ad0551d8466fb8c904d69d9439a16dd7fc60a"
+  }
+]

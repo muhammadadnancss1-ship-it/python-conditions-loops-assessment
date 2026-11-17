@@ -1,0 +1,13 @@
+===============Evaluation for scholorship===============
+Enter the student name Test Student
+enter student marks in percentage90
+enter your attandance percentage85
+enter family income50000
+
+========== SCHOLARSHIP REPORT ==========
+Student Name: Test Student
+Academic Marks: 90.00%
+Attendance: 85.00%
+Monthly Family Income: Rs. 50000.00
+Eligibility Evaluation:
+nScholarship Result: fully scholorship 

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="930" viewBox="0 0 1120 930" role="img" aria-labelledby="title desc">
+<title id="title">UML module diagram</title><desc id="desc">Procedural modules, top-level state, inline thresholds, statement sections and calls to Python built-ins. There are no custom functions, classes, imports or inter-module calls.</desc>
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#53647B"/></marker>
+<linearGradient id="banner-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ECF5FF"/><stop offset="0.58" stop-color="#F4F1FF"/><stop offset="1" stop-color="#E8F7F1"/></linearGradient>
+</defs>
+<rect width="1120" height="930" fill="#FFFFFF"/>
+<text x="44" y="42" font-family="Arial, DejaVu Sans, sans-serif" font-size="12" fill="#1764D5" font-weight="700" text-anchor="start"><tspan x="44" dy="0">04 / CODE STRUCTURE</tspan></text>
+<text x="44" y="78" font-family="Arial, DejaVu Sans, sans-serif" font-size="28" fill="#16243B" font-weight="700" text-anchor="start"><tspan x="44" dy="0">Procedural modules &amp; their dependencies</tspan></text>
+<text x="44" y="108" font-family="Arial, DejaVu Sans, sans-serif" font-size="15" fill="#53647B" font-weight="400" text-anchor="start"><tspan x="44" dy="0">UML module view: the programs execute independently from top to bottom.</tspan></text>
+<path d="M44 128 H1076" stroke="#DDE5EE" stroke-width="1"/>
+<rect x="40" y="175" width="500" height="455" rx="12" fill="#FFFFFF" stroke="#7944C9" stroke-width="1.5"/>
+<text x="62" y="205" font-family="Arial, DejaVu Sans, sans-serif" font-size="12" fill="#7944C9" font-weight="600" text-anchor="start"><tspan x="62" dy="0">«script module»</tspan></text>
+<text x="62" y="238" font-family="DejaVu Sans Mono, monospace" font-size="17" fill="#16243B" font-weight="700" text-anchor="start"><tspan x="62" dy="0">student_scholarship_system.py</tspan></text>
+<path d="M40 258 H540" stroke="#DDE5EE"/>
+<text x="62" y="287" font-family="Arial, DejaVu Sans, sans-serif" font-size="11" fill="#1764D5" font-weight="700" text-anchor="start"><tspan x="62" dy="0">TOP-LEVEL STATE</tspan></text>
+<text x="62" y="314" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#16243B" font-weight="400" text-anchor="start"><tspan x="62" dy="0">candidate_name; academic_marks</tspan><tspan x="62" dy="24">attand_percentage; income</tspan><tspan x="62" dy="24">marks; attand; income_info; scholorship</tspan></text>
+<text x="62" y="455" font-family="Arial, DejaVu Sans, sans-serif" font-size="11" fill="#7944C9" font-weight="700" text-anchor="start"><tspan x="62" dy="0">INLINE LITERALS  /  NO NAMED CONSTANTS</tspan></text>
+<text x="62" y="480" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#16243B" font-weight="400" text-anchor="start"><tspan x="62" dy="0">80; 85; 50,000; 90; 0; 100</tspan></text>
+<path d="M40 503 H540" stroke="#DDE5EE"/>
+<text x="62" y="535" font-family="Arial, DejaVu Sans, sans-serif" font-size="11" fill="#1764D5" font-weight="700" text-anchor="start"><tspan x="62" dy="0">STATEMENT SECTIONS  /  NO CUSTOM FUNCTIONS</tspan></text>
+<text x="62" y="564" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#16243B" font-weight="400" text-anchor="start"><tspan x="62" dy="0">Read and convert inputs</tspan><tspan x="62" dy="25">Validate → choose award → print report</tspan></text>
+<rect x="70" y="726" width="440" height="89" rx="12" fill="#EDF5FF" stroke="#1764D5" stroke-width="1.5"/>
+<text x="290.0" y="764.58" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#16243B" font-weight="500" text-anchor="middle"><tspan x="290.0" dy="0">Python built-ins / methods</tspan><tspan x="290.0" dy="22.72">input()  ·  float()  ·  print()</tspan></text>
+<polyline points="290,630 290,726" fill="none" stroke="#53647B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="304" y="685" font-family="Arial, DejaVu Sans, sans-serif" font-size="14" fill="#53647B" font-weight="600" text-anchor="start"><tspan x="304" dy="0">«calls»</tspan></text>
+<rect x="580" y="175" width="500" height="455" rx="12" fill="#FFFFFF" stroke="#7944C9" stroke-width="1.5"/>
+<text x="602" y="205" font-family="Arial, DejaVu Sans, sans-serif" font-size="12" fill="#7944C9" font-weight="600" text-anchor="start"><tspan x="602" dy="0">«script module»</tspan></text>
+<text x="602" y="238" font-family="DejaVu Sans Mono, monospace" font-size="17" fill="#16243B" font-weight="700" text-anchor="start"><tspan x="602" dy="0">pharmacy_inventory_system.py</tspan></text>
+<path d="M580 258 H1080" stroke="#DDE5EE"/>
+<text x="602" y="287" font-family="Arial, DejaVu Sans, sans-serif" font-size="11" fill="#1764D5" font-weight="700" text-anchor="start"><tspan x="602" dy="0">TOP-LEVEL STATE</tspan></text>
+<text x="602" y="314" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#16243B" font-weight="400" text-anchor="start"><tspan x="602" dy="0">total_medicines; total_revenue</tspan><tspan x="602" dy="24">restock_count; processed_medicines</tspan><tspan x="602" dy="24">medicine_name; available_stock</tspan><tspan x="602" dy="24">price_per_unit; quantity_sold</tspan><tspan x="602" dy="24">sales_amount; remaining_stock; medicine</tspan></text>
+<text x="602" y="455" font-family="Arial, DejaVu Sans, sans-serif" font-size="11" fill="#7944C9" font-weight="700" text-anchor="start"><tspan x="602" dy="0">INLINE LITERALS  /  NO NAMED CONSTANTS</tspan></text>
+<text x="602" y="480" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#16243B" font-weight="400" text-anchor="start"><tspan x="602" dy="0">0; 1; 10</tspan></text>
+<path d="M580 503 H1080" stroke="#DDE5EE"/>
+<text x="602" y="535" font-family="Arial, DejaVu Sans, sans-serif" font-size="11" fill="#1764D5" font-weight="700" text-anchor="start"><tspan x="602" dy="0">STATEMENT SECTIONS  /  NO CUSTOM FUNCTIONS</tspan></text>
+<text x="602" y="564" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#16243B" font-weight="400" text-anchor="start"><tspan x="602" dy="0">Read count → for / range loop</tspan><tspan x="602" dy="25">Validate → sell/reject → restock → report</tspan></text>
+<rect x="610" y="726" width="440" height="89" rx="12" fill="#EDF5FF" stroke="#1764D5" stroke-width="1.5"/>
+<text x="830.0" y="753.22" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#16243B" font-weight="500" text-anchor="middle"><tspan x="830.0" dy="0">Python built-ins / methods</tspan><tspan x="830.0" dy="22.72">input()  ·  int()  ·  float()</tspan><tspan x="830.0" dy="22.72">range()  ·  str.strip()  ·  print()</tspan></text>
+<polyline points="830,630 830,726" fill="none" stroke="#53647B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="844" y="685" font-family="Arial, DejaVu Sans, sans-serif" font-size="14" fill="#53647B" font-weight="600" text-anchor="start"><tspan x="844" dy="0">«calls»</tspan></text>
+<rect x="40" y="849" width="1040" height="45" rx="12" fill="#FFF6E5" stroke="#956113" stroke-width="1.5"/>
+<text x="560.0" y="876.6" font-family="Arial, DejaVu Sans, sans-serif" font-size="15" fill="#16243B" font-weight="500" text-anchor="middle"><tspan x="560.0" dy="0">No imports, shared state, classes, or calls between the two application files.</tspan></text>
+</svg>

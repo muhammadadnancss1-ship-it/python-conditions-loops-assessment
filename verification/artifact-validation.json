@@ -1,0 +1,92 @@
+{
+  "svg": {
+    "banner.svg": {
+      "xml": "PASS",
+      "external_resources": "NONE",
+      "png_dimensions": [
+        1060,
+        276
+      ],
+      "render": "PASS",
+      "text_within_canvas": "PASS"
+    },
+    "overview.svg": {
+      "xml": "PASS",
+      "external_resources": "NONE",
+      "png_dimensions": [
+        1120,
+        766
+      ],
+      "render": "PASS",
+      "text_within_canvas": "PASS"
+    },
+    "pharmacy_inventory_system_flow.svg": {
+      "xml": "PASS",
+      "external_resources": "NONE",
+      "png_dimensions": [
+        1120,
+        2315
+      ],
+      "render": "PASS",
+      "text_within_canvas": "PASS"
+    },
+    "student_scholarship_system_flow.svg": {
+      "xml": "PASS",
+      "external_resources": "NONE",
+      "png_dimensions": [
+        1120,
+        1770
+      ],
+      "render": "PASS",
+      "text_within_canvas": "PASS"
+    },
+    "uml_diagram.svg": {
+      "xml": "PASS",
+      "external_resources": "NONE",
+      "png_dimensions": [
+        1120,
+        930
+      ],
+      "render": "PASS",
+      "text_within_canvas": "PASS"
+    }
+  },
+  "preview": {
+    "light": {
+      "html_structure": "PASS",
+      "self_contained_images": 5,
+      "javascript_syntax": "PASS",
+      "external_resources": "NONE",
+      "browser_visual_check": "NOT PERFORMED: local HTML navigation blocked by browser policy",
+      "control_logic": "PASS: Node DOM-fixture simulation (theme, disclosure toggles, source viewer)"
+    },
+    "dark": {
+      "html_structure": "PASS",
+      "self_contained_images": 5,
+      "javascript_syntax": "PASS",
+      "external_resources": "NONE",
+      "browser_visual_check": "NOT PERFORMED: local HTML navigation blocked by browser policy",
+      "control_logic": "PASS: Node DOM-fixture simulation (theme, disclosure toggles, source viewer)"
+    }
+  },
+  "readme": {
+    "section_order": "PASS",
+    "relative_file_links": "PASS",
+    "test_rows": 84,
+    "real_terminal_transcripts": 6
+  },
+  "source_integrity": {
+    "student_scholarship_system.py": {
+      "source_upload": "student_scholarship_system(2).py",
+      "sha256": "cd2c8a690392f714d81c65f2296e54b06346f658d22cbc1b9e50c3378d9437ab",
+      "size_bytes": 2486,
+      "unchanged": true
+    },
+    "pharmacy_inventory_system.py": {
+      "source_upload": "pharmacy_inventory_system(2).py",
+      "sha256": "dc933826677cd9dfd2d162830bd378e1ad713e4f1626c89c4f0517928aedd5ad",
+      "size_bytes": 3043,
+      "unchanged": true
+    }
+  }
+}

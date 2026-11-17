@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="766" viewBox="0 0 1120 766" role="img" aria-labelledby="title desc">
+<title id="title">Assessment at a glance</title><desc id="desc">A card for each task, showing its file, topic, inputs, rules, outputs, and concepts. The documentation reflects frozen source files.</desc>
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#53647B"/></marker>
+<linearGradient id="banner-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ECF5FF"/><stop offset="0.58" stop-color="#F4F1FF"/><stop offset="1" stop-color="#E8F7F1"/></linearGradient>
+</defs>
+<rect width="1120" height="766" fill="#FFFFFF"/>
+<text x="44" y="42" font-family="Arial, DejaVu Sans, sans-serif" font-size="12" fill="#1764D5" font-weight="700" text-anchor="start"><tspan x="44" dy="0">01 / PROJECT MAP</tspan></text>
+<text x="44" y="78" font-family="Arial, DejaVu Sans, sans-serif" font-size="28" fill="#16243B" font-weight="700" text-anchor="start"><tspan x="44" dy="0">Two tasks. One foundation.</tspan></text>
+<text x="44" y="108" font-family="Arial, DejaVu Sans, sans-serif" font-size="15" fill="#53647B" font-weight="400" text-anchor="start"><tspan x="44" dy="0">Follow the inputs, decisions, and reports in each independent console program.</tspan></text>
+<path d="M44 128 H1076" stroke="#DDE5EE" stroke-width="1"/>
+<rect x="40" y="153" width="500" height="519" rx="16" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1.5"/>
+<rect x="60" y="174" width="47" height="31" rx="8" fill="#EDF5FF" stroke="#EDF5FF" stroke-width="0"/>
+<text x="83.5" y="194.26" font-family="Arial, DejaVu Sans, sans-serif" font-size="14" fill="#1764D5" font-weight="700" text-anchor="middle"><tspan x="83.5" dy="0">01</tspan></text>
+<text x="120" y="195" font-family="Arial, DejaVu Sans, sans-serif" font-size="11" fill="#1764D5" font-weight="700" text-anchor="start"><tspan x="120" dy="0">CONDITIONAL STATEMENTS</tspan></text>
+<text x="63" y="241" font-family="Arial, DejaVu Sans, sans-serif" font-size="23" fill="#16243B" font-weight="700" text-anchor="start"><tspan x="63" dy="0">Scholarship Eligibility</tspan></text>
+<text x="63" y="271" font-family="DejaVu Sans Mono, monospace" font-size="14" fill="#53647B" font-weight="400" text-anchor="start"><tspan x="63" dy="0">student_scholarship_system.py</tspan></text>
+<rect x="580" y="153" width="500" height="519" rx="16" fill="#FFFFFF" stroke="#DCE5EF" stroke-width="1.5"/>
+<rect x="600" y="174" width="47" height="31" rx="8" fill="#EDF5FF" stroke="#EDF5FF" stroke-width="0"/>
+<text x="623.5" y="194.26" font-family="Arial, DejaVu Sans, sans-serif" font-size="14" fill="#1764D5" font-weight="700" text-anchor="middle"><tspan x="623.5" dy="0">02</tspan></text>
+<text x="660" y="195" font-family="Arial, DejaVu Sans, sans-serif" font-size="11" fill="#1764D5" font-weight="700" text-anchor="start"><tspan x="660" dy="0">CONDITIONS + LOOPS</tspan></text>
+<text x="603" y="241" font-family="Arial, DejaVu Sans, sans-serif" font-size="23" fill="#16243B" font-weight="700" text-anchor="start"><tspan x="603" dy="0">Pharmacy Inventory &amp; Sales</tspan></text>
+<text x="603" y="271" font-family="DejaVu Sans Mono, monospace" font-size="14" fill="#53647B" font-weight="400" text-anchor="start"><tspan x="603" dy="0">pharmacy_inventory_system.py</tspan></text>
+<text x="63" y="313" font-family="Arial, DejaVu Sans, sans-serif" font-size="10" fill="#7944C9" font-weight="700" text-anchor="start"><tspan x="63" dy="0">INPUT</tspan></text>
+<text x="63" y="336" font-family="Arial, DejaVu Sans, sans-serif" font-size="15" fill="#16243B" font-weight="400" text-anchor="start"><tspan x="63" dy="0">Name; marks %; attendance %; monthly income</tspan></text>
+<text x="63" y="381" font-family="Arial, DejaVu Sans, sans-serif" font-size="10" fill="#7944C9" font-weight="700" text-anchor="start"><tspan x="63" dy="0">RULES</tspan></text>
+<text x="63" y="404" font-family="Arial, DejaVu Sans, sans-serif" font-size="15" fill="#16243B" font-weight="400" text-anchor="start"><tspan x="63" dy="0">Marks ≥ 80%; attendance ≥ 85%;</tspan><tspan x="63" dy="20">income ≤ Rs. 50,000</tspan></text>
+<text x="63" y="449" font-family="Arial, DejaVu Sans, sans-serif" font-size="10" fill="#7944C9" font-weight="700" text-anchor="start"><tspan x="63" dy="0">AWARDS</tspan></text>
+<text x="63" y="472" font-family="Arial, DejaVu Sans, sans-serif" font-size="15" fill="#16243B" font-weight="400" text-anchor="start"><tspan x="63" dy="0">Full: marks ≥ 90%; partial: 80% ≤ marks &lt; 90%</tspan></text>
+<text x="63" y="517" font-family="Arial, DejaVu Sans, sans-serif" font-size="10" fill="#7944C9" font-weight="700" text-anchor="start"><tspan x="63" dy="0">OUTPUT</tspan></text>
+<text x="63" y="540" font-family="Arial, DejaVu Sans, sans-serif" font-size="15" fill="#16243B" font-weight="400" text-anchor="start"><tspan x="63" dy="0">Student report; award text; validation messages</tspan></text>
+<text x="63" y="585" font-family="Arial, DejaVu Sans, sans-serif" font-size="10" fill="#7944C9" font-weight="700" text-anchor="start"><tspan x="63" dy="0">CONCEPTS</tspan></text>
+<text x="63" y="608" font-family="Arial, DejaVu Sans, sans-serif" font-size="15" fill="#16243B" font-weight="400" text-anchor="start"><tspan x="63" dy="0">if / elif / else; and / or; float; f-strings</tspan></text>
+<text x="603" y="313" font-family="Arial, DejaVu Sans, sans-serif" font-size="10" fill="#7944C9" font-weight="700" text-anchor="start"><tspan x="603" dy="0">INPUT</tspan></text>
+<text x="603" y="336" font-family="Arial, DejaVu Sans, sans-serif" font-size="15" fill="#16243B" font-weight="400" text-anchor="start"><tspan x="603" dy="0">Medicine count; name; stock;</tspan><tspan x="603" dy="20">unit price; sale quantity</tspan></text>
+<text x="603" y="381" font-family="Arial, DejaVu Sans, sans-serif" font-size="10" fill="#7944C9" font-weight="700" text-anchor="start"><tspan x="603" dy="0">RULES</tspan></text>
+<text x="603" y="404" font-family="Arial, DejaVu Sans, sans-serif" font-size="15" fill="#16243B" font-weight="400" text-anchor="start"><tspan x="603" dy="0">Accept quantity ≤ stock;</tspan><tspan x="603" dy="20">restock when remaining &lt; 10</tspan></text>
+<text x="603" y="449" font-family="Arial, DejaVu Sans, sans-serif" font-size="10" fill="#7944C9" font-weight="700" text-anchor="start"><tspan x="603" dy="0">CALCULATIONS</tspan></text>
+<text x="603" y="472" font-family="Arial, DejaVu Sans, sans-serif" font-size="15" fill="#16243B" font-weight="400" text-anchor="start"><tspan x="603" dy="0">Sale = quantity × price;</tspan><tspan x="603" dy="20">stock = stock − quantity</tspan></text>
+<text x="603" y="517" font-family="Arial, DejaVu Sans, sans-serif" font-size="10" fill="#7944C9" font-weight="700" text-anchor="start"><tspan x="603" dy="0">OUTPUT</tspan></text>
+<text x="603" y="540" font-family="Arial, DejaVu Sans, sans-serif" font-size="15" fill="#16243B" font-weight="400" text-anchor="start"><tspan x="603" dy="0">Sale decisions; revenue; processed and restock totals</tspan></text>
+<text x="603" y="585" font-family="Arial, DejaVu Sans, sans-serif" font-size="10" fill="#7944C9" font-weight="700" text-anchor="start"><tspan x="603" dy="0">CONCEPTS</tspan></text>
+<text x="603" y="608" font-family="Arial, DejaVu Sans, sans-serif" font-size="15" fill="#16243B" font-weight="400" text-anchor="start"><tspan x="603" dy="0">for / range; continue; counters; accumulator</tspan></text>
+<rect x="40" y="695" width="1040" height="43" rx="12" fill="#FFF6E5" stroke="#956113" stroke-width="1.5"/>
+<text x="560.0" y="721.26" font-family="Arial, DejaVu Sans, sans-serif" font-size="14" fill="#16243B" font-weight="500" text-anchor="middle"><tspan x="560.0" dy="0">Source files are unchanged. Test findings are documented explicitly in the README.</tspan></text>
+</svg>

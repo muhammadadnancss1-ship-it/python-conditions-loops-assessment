@@ -1,0 +1,24 @@
+========== SMART PHARMACY SYSTEM ==========
+How many medicines do you want to process? 2
+========== MEDICINE 1 ==========
+Enter medicine name: 
+Enter available stock: 20
+Enter price per unit (Rs.): 5
+Enter quantity sold: 2
+Invalid medicine information. Skipping this medicine.
+========== MEDICINE 2 ==========
+Enter medicine name: M2
+Enter available stock: 20
+Enter price per unit (Rs.): 10
+Enter quantity sold: 2
+
+Sale Successful!
+Medicine: M2
+Sales Amount: Rs. 20.00
+Remaining Stock: 18
+
+========== FINAL PHARMACY REPORT ==========
+Total Medicines Processed: 1
+Total Pharmacy Revenue: Rs. 20.00
+Medicines Requiring Restocking: 0
+=================================================

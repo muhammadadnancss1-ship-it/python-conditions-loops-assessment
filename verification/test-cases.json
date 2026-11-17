@@ -1,0 +1,1679 @@
+[
+  {
+    "id": "S01",
+    "task": "S",
+    "scenario": "Normal full award",
+    "inputs": [
+      "Test Student",
+      "95",
+      "90",
+      "40000"
+    ],
+    "required_result": "Full award",
+    "observed_contains": [
+      "nScholarship Result: fully scholorship "
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "S02",
+    "task": "S",
+    "scenario": "Full-award boundary",
+    "inputs": [
+      "Test Student",
+      "90",
+      "85",
+      "50000"
+    ],
+    "required_result": "Full award at inclusive limits",
+    "observed_contains": [
+      "nScholarship Result: fully scholorship "
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "S03",
+    "task": "S",
+    "scenario": "Decimal partial award",
+    "inputs": [
+      "Test Student",
+      "89.5",
+      "85",
+      "50000"
+    ],
+    "required_result": "Partial award",
+    "observed_contains": [
+      "nScholarship Result:  partially scholorship"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "S04",
+    "task": "S",
+    "scenario": "Minimum eligibility limits",
+    "inputs": [
+      "Test Student",
+      "80",
+      "85",
+      "50000"
+    ],
+    "required_result": "Partial award",
+    "observed_contains": [
+      "nScholarship Result:  partially scholorship"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "S05",
+    "task": "S",
+    "scenario": "Zero income is valid",
+    "inputs": [
+      "Test Student",
+      "100",
+      "100",
+      "0"
+    ],
+    "required_result": "Full award without an income-failure reason",
+    "observed_contains": [
+      "nScholarship Result: fully scholorship ",
+      "- Family income exceeds Rs. 50,000."
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S06",
+    "task": "S",
+    "scenario": "Marks fail alone",
+    "inputs": [
+      "Test Student",
+      "79.99",
+      "90",
+      "30000"
+    ],
+    "required_result": "Reject and explain low marks",
+    "observed_contains": [
+      "nScholarship Result: Not elegible"
+    ],
+    "observed_absent": [
+      "- Marks below required 80%."
+    ],
+    "error": null,
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S07",
+    "task": "S",
+    "scenario": "Attendance fails alone",
+    "inputs": [
+      "Test Student",
+      "90",
+      "84.99",
+      "30000"
+    ],
+    "required_result": "Reject and explain low attendance",
+    "observed_contains": [
+      "nScholarship Result: Not elegible"
+    ],
+    "observed_absent": [
+      "- Attendance below required 85%."
+    ],
+    "error": null,
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S08",
+    "task": "S",
+    "scenario": "Income fails alone",
+    "inputs": [
+      "Test Student",
+      "95",
+      "90",
+      "50000.01"
+    ],
+    "required_result": "Reject and explain excessive income",
+    "observed_contains": [
+      "incorrect income info"
+    ],
+    "observed_absent": [],
+    "error": "NameError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S09",
+    "task": "S",
+    "scenario": "Marks and attendance fail",
+    "inputs": [
+      "Test Student",
+      "70",
+      "70",
+      "40000"
+    ],
+    "required_result": "Reject and explain both failures",
+    "observed_contains": [
+      "nScholarship Result: Not elegible"
+    ],
+    "observed_absent": [
+      "- Marks below required 80%.",
+      "- Attendance below required 85%."
+    ],
+    "error": null,
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S10",
+    "task": "S",
+    "scenario": "All eligibility rules fail",
+    "inputs": [
+      "Test Student",
+      "70",
+      "70",
+      "60000"
+    ],
+    "required_result": "Reject and explain all three failures",
+    "observed_contains": [
+      "incorrect income info"
+    ],
+    "observed_absent": [],
+    "error": "NameError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S11",
+    "task": "S",
+    "scenario": "Zero marks",
+    "inputs": [
+      "Test Student",
+      "0",
+      "90",
+      "20000"
+    ],
+    "required_result": "Reject with a low-marks reason",
+    "observed_contains": [
+      "nScholarship Result: Not elegible",
+      "- Marks below required 80%."
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "S12",
+    "task": "S",
+    "scenario": "Zero attendance",
+    "inputs": [
+      "Test Student",
+      "90",
+      "0",
+      "20000"
+    ],
+    "required_result": "Reject with a low-attendance reason",
+    "observed_contains": [
+      "nScholarship Result: Not elegible",
+      "- Attendance below required 85%."
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "S13",
+    "task": "S",
+    "scenario": "All numeric inputs zero",
+    "inputs": [
+      "Test Student",
+      "0",
+      "0",
+      "0"
+    ],
+    "required_result": "Reject for marks and attendance only",
+    "observed_contains": [
+      "nScholarship Result: Not elegible",
+      "- Marks below required 80%.",
+      "- Attendance below required 85%.",
+      "- Family income exceeds Rs. 50,000."
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S14",
+    "task": "S",
+    "scenario": "Marks below zero",
+    "inputs": [
+      "Test Student",
+      "-0.01",
+      "90",
+      "30000"
+    ],
+    "required_result": "Validation message without crashing",
+    "observed_contains": [
+      "it is not correct marks"
+    ],
+    "observed_absent": [],
+    "error": "NameError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S15",
+    "task": "S",
+    "scenario": "Marks above 100",
+    "inputs": [
+      "Test Student",
+      "100.01",
+      "90",
+      "30000"
+    ],
+    "required_result": "Validation message without crashing",
+    "observed_contains": [
+      "it is not correct marks"
+    ],
+    "observed_absent": [],
+    "error": "NameError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S16",
+    "task": "S",
+    "scenario": "Attendance below zero",
+    "inputs": [
+      "Test Student",
+      "90",
+      "-0.01",
+      "30000"
+    ],
+    "required_result": "Validation message without crashing",
+    "observed_contains": [
+      "incorrect attandance"
+    ],
+    "observed_absent": [],
+    "error": "NameError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S17",
+    "task": "S",
+    "scenario": "Attendance above 100",
+    "inputs": [
+      "Test Student",
+      "90",
+      "100.01",
+      "30000"
+    ],
+    "required_result": "Reject out-of-range attendance",
+    "observed_contains": [
+      "nScholarship Result: fully scholorship "
+    ],
+    "observed_absent": [
+      "incorrect attandance"
+    ],
+    "error": null,
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S18",
+    "task": "S",
+    "scenario": "Negative family income",
+    "inputs": [
+      "Test Student",
+      "90",
+      "90",
+      "-0.01"
+    ],
+    "required_result": "Validation message without crashing",
+    "observed_contains": [
+      "incorrect income info"
+    ],
+    "observed_absent": [],
+    "error": "NameError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S19",
+    "task": "S",
+    "scenario": "Empty student name",
+    "inputs": [
+      "",
+      "90",
+      "90",
+      "30000"
+    ],
+    "required_result": "Reject a blank name",
+    "observed_contains": [
+      "nScholarship Result: fully scholorship ",
+      "Student Name: \n"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S20",
+    "task": "S",
+    "scenario": "Whitespace-only name",
+    "inputs": [
+      "   ",
+      "90",
+      "90",
+      "30000"
+    ],
+    "required_result": "Reject a whitespace-only name",
+    "observed_contains": [
+      "nScholarship Result: fully scholorship ",
+      "Student Name:    \n"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S21",
+    "task": "S",
+    "scenario": "Non-numeric marks",
+    "inputs": [
+      "Test Student",
+      "abc"
+    ],
+    "required_result": "Clear input-validation message",
+    "observed_contains": [],
+    "observed_absent": [],
+    "error": "ValueError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S22",
+    "task": "S",
+    "scenario": "Non-numeric attendance",
+    "inputs": [
+      "Test Student",
+      "90",
+      "abc"
+    ],
+    "required_result": "Clear input-validation message",
+    "observed_contains": [],
+    "observed_absent": [],
+    "error": "ValueError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S23",
+    "task": "S",
+    "scenario": "Non-numeric income",
+    "inputs": [
+      "Test Student",
+      "90",
+      "90",
+      "abc"
+    ],
+    "required_result": "Clear input-validation message",
+    "observed_contains": [],
+    "observed_absent": [],
+    "error": "ValueError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S24",
+    "task": "S",
+    "scenario": "Empty marks",
+    "inputs": [
+      "Test Student",
+      ""
+    ],
+    "required_result": "Clear input-validation message",
+    "observed_contains": [],
+    "observed_absent": [],
+    "error": "ValueError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S25",
+    "task": "S",
+    "scenario": "Empty attendance",
+    "inputs": [
+      "Test Student",
+      "90",
+      ""
+    ],
+    "required_result": "Clear input-validation message",
+    "observed_contains": [],
+    "observed_absent": [],
+    "error": "ValueError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S26",
+    "task": "S",
+    "scenario": "Empty income",
+    "inputs": [
+      "Test Student",
+      "90",
+      "90",
+      ""
+    ],
+    "required_result": "Clear input-validation message",
+    "observed_contains": [],
+    "observed_absent": [],
+    "error": "ValueError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S27",
+    "task": "S",
+    "scenario": "NaN marks",
+    "inputs": [
+      "Test Student",
+      "nan",
+      "90",
+      "30000"
+    ],
+    "required_result": "Reject non-finite marks",
+    "observed_contains": [
+      "nScholarship Result: Not elegible",
+      "Academic Marks: nan%"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S28",
+    "task": "S",
+    "scenario": "Infinite marks",
+    "inputs": [
+      "Test Student",
+      "inf",
+      "90",
+      "30000"
+    ],
+    "required_result": "Reject non-finite marks without crashing",
+    "observed_contains": [
+      "it is not correct marks"
+    ],
+    "observed_absent": [],
+    "error": "NameError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S29",
+    "task": "S",
+    "scenario": "NaN attendance",
+    "inputs": [
+      "Test Student",
+      "90",
+      "nan",
+      "30000"
+    ],
+    "required_result": "Reject non-finite attendance",
+    "observed_contains": [
+      "nScholarship Result: Not elegible",
+      "Attendance: nan%"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S30",
+    "task": "S",
+    "scenario": "Infinite attendance",
+    "inputs": [
+      "Test Student",
+      "90",
+      "inf",
+      "30000"
+    ],
+    "required_result": "Reject non-finite attendance",
+    "observed_contains": [
+      "nScholarship Result: fully scholorship ",
+      "Attendance: inf%"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S31",
+    "task": "S",
+    "scenario": "NaN income",
+    "inputs": [
+      "Test Student",
+      "90",
+      "90",
+      "nan"
+    ],
+    "required_result": "Reject non-finite income",
+    "observed_contains": [
+      "nScholarship Result: Not elegible",
+      "Monthly Family Income: Rs. nan"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S32",
+    "task": "S",
+    "scenario": "Infinite income",
+    "inputs": [
+      "Test Student",
+      "90",
+      "90",
+      "inf"
+    ],
+    "required_result": "Reject non-finite income without crashing",
+    "observed_contains": [
+      "incorrect income info"
+    ],
+    "observed_absent": [],
+    "error": "NameError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S33",
+    "task": "S",
+    "scenario": "Negative infinite attendance",
+    "inputs": [
+      "Test Student",
+      "90",
+      "-inf",
+      "30000"
+    ],
+    "required_result": "Reject non-finite attendance without crashing",
+    "observed_contains": [
+      "incorrect attandance"
+    ],
+    "observed_absent": [],
+    "error": "NameError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S34",
+    "task": "S",
+    "scenario": "Rounding below marks threshold",
+    "inputs": [
+      "Test Student",
+      "79.9999",
+      "90",
+      "30000"
+    ],
+    "required_result": "Reject using the unrounded marks and explain why",
+    "observed_contains": [
+      "nScholarship Result: Not elegible",
+      "Academic Marks: 80.00%"
+    ],
+    "observed_absent": [
+      "- Marks below required 80%."
+    ],
+    "error": null,
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S35",
+    "task": "S",
+    "scenario": "Rounding below full-award threshold",
+    "inputs": [
+      "Test Student",
+      "89.9999",
+      "90",
+      "30000"
+    ],
+    "required_result": "Partial award based on the unrounded value",
+    "observed_contains": [
+      "nScholarship Result:  partially scholorship",
+      "Academic Marks: 90.00%"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "S36",
+    "task": "S",
+    "scenario": "Unicode student name",
+    "inputs": [
+      "علی",
+      "92",
+      "90",
+      "30000"
+    ],
+    "required_result": "Full award and preserve the name",
+    "observed_contains": [
+      "nScholarship Result: fully scholorship ",
+      "Student Name: علی"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "S37",
+    "task": "S",
+    "scenario": "Upper percentage limits",
+    "inputs": [
+      "Test Student",
+      "100",
+      "100",
+      "50000"
+    ],
+    "required_result": "Full award",
+    "observed_contains": [
+      "nScholarship Result: fully scholorship "
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "S38",
+    "task": "S",
+    "scenario": "Small positive family income",
+    "inputs": [
+      "Test Student",
+      "90",
+      "85",
+      "0.01"
+    ],
+    "required_result": "Full award",
+    "observed_contains": [
+      "nScholarship Result: fully scholorship "
+    ],
+    "observed_absent": [
+      "- Family income exceeds Rs. 50,000."
+    ],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "S39",
+    "task": "S",
+    "scenario": "Low marks plus zero attendance",
+    "inputs": [
+      "Test Student",
+      "75",
+      "0",
+      "30000"
+    ],
+    "required_result": "Explain both failed criteria",
+    "observed_contains": [
+      "nScholarship Result: Not elegible",
+      "- Attendance below required 85%."
+    ],
+    "observed_absent": [
+      "- Marks below required 80%."
+    ],
+    "error": null,
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "S40",
+    "task": "S",
+    "scenario": "Leading and trailing spaces in numeric input",
+    "inputs": [
+      "Test Student",
+      " 90 ",
+      " 85 ",
+      " 50000 "
+    ],
+    "required_result": "Parse numeric whitespace; full award",
+    "observed_contains": [
+      "nScholarship Result: fully scholorship "
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P01",
+    "task": "P",
+    "scenario": "Normal accepted sale",
+    "inputs": [
+      "1",
+      "Panadol",
+      "50",
+      "150",
+      "10"
+    ],
+    "required_result": "Rs. 1500.00; 40 left; 1 processed; 0 restock",
+    "observed_contains": [
+      "Sale Successful!",
+      "Remaining Stock: 40",
+      "Total Medicines Processed: 1",
+      "Total Pharmacy Revenue: Rs. 1500.00",
+      "Medicines Requiring Restocking: 0"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P02",
+    "task": "P",
+    "scenario": "Five-medicine revenue total",
+    "inputs": [
+      "5",
+      "penadol",
+      "50",
+      "150",
+      "10",
+      "Mogral",
+      "50",
+      "300",
+      "5",
+      "dawtor",
+      "56",
+      "200",
+      "9",
+      "baydall",
+      "10",
+      "20",
+      "3",
+      "extore",
+      "45",
+      "23",
+      "25"
+    ],
+    "required_result": "5 processed; Rs. 5435.00; 1 restock",
+    "observed_contains": [
+      "Total Medicines Processed: 5",
+      "Total Pharmacy Revenue: Rs. 5435.00",
+      "Medicines Requiring Restocking: 1"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P03",
+    "task": "P",
+    "scenario": "Zero sale at the stock limit",
+    "inputs": [
+      "1",
+      "M1",
+      "10",
+      "20",
+      "0"
+    ],
+    "required_result": "Zero revenue; 10 left; no warning",
+    "observed_contains": [
+      "Sale Successful!",
+      "Remaining Stock: 10",
+      "Total Medicines Processed: 1",
+      "Total Pharmacy Revenue: Rs. 0.00",
+      "Medicines Requiring Restocking: 0"
+    ],
+    "observed_absent": [
+      "WARNING:"
+    ],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P04",
+    "task": "P",
+    "scenario": "Remaining stock of nine",
+    "inputs": [
+      "1",
+      "M1",
+      "10",
+      "20",
+      "1"
+    ],
+    "required_result": "Rs. 20.00; 9 left; 1 restock",
+    "observed_contains": [
+      "Sale Successful!",
+      "Remaining Stock: 9",
+      "Total Medicines Processed: 1",
+      "Total Pharmacy Revenue: Rs. 20.00",
+      "Medicines Requiring Restocking: 1"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P05",
+    "task": "P",
+    "scenario": "Sell the entire stock",
+    "inputs": [
+      "1",
+      "M1",
+      "10",
+      "20",
+      "10"
+    ],
+    "required_result": "Rs. 200.00; 0 left; 1 restock",
+    "observed_contains": [
+      "Sale Successful!",
+      "Remaining Stock: 0",
+      "Total Medicines Processed: 1",
+      "Total Pharmacy Revenue: Rs. 200.00",
+      "Medicines Requiring Restocking: 1"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P06",
+    "task": "P",
+    "scenario": "Rejected sale with low stock",
+    "inputs": [
+      "1",
+      "Augmentin",
+      "8",
+      "200",
+      "12"
+    ],
+    "required_result": "Reject; retain 8 units; 0 revenue; 1 restock",
+    "observed_contains": [
+      "Sale Rejected!",
+      "Available Stock: 8",
+      "Requested Quantity: 12",
+      "WARNING: Augmentin requires restocking!",
+      "Total Medicines Processed: 1",
+      "Total Pharmacy Revenue: Rs. 0.00",
+      "Medicines Requiring Restocking: 1"
+    ],
+    "observed_absent": [
+      "Sale Successful!",
+      "Remaining Stock:"
+    ],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P07",
+    "task": "P",
+    "scenario": "Rejected sale with sufficient reserve",
+    "inputs": [
+      "1",
+      "M1",
+      "20",
+      "2",
+      "21"
+    ],
+    "required_result": "Reject; 20 retained; no restock",
+    "observed_contains": [
+      "Sale Rejected!",
+      "Total Medicines Processed: 1",
+      "Total Pharmacy Revenue: Rs. 0.00",
+      "Medicines Requiring Restocking: 0"
+    ],
+    "observed_absent": [
+      "WARNING:"
+    ],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P08",
+    "task": "P",
+    "scenario": "Zero stock and zero request",
+    "inputs": [
+      "1",
+      "M1",
+      "0",
+      "10",
+      "0"
+    ],
+    "required_result": "Accept zero sale; warn about zero stock",
+    "observed_contains": [
+      "Sale Successful!",
+      "Remaining Stock: 0",
+      "Total Medicines Processed: 1",
+      "Total Pharmacy Revenue: Rs. 0.00",
+      "Medicines Requiring Restocking: 1"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P09",
+    "task": "P",
+    "scenario": "Zero stock and positive request",
+    "inputs": [
+      "1",
+      "M1",
+      "0",
+      "10",
+      "1"
+    ],
+    "required_result": "Reject; 0 revenue; 1 restock",
+    "observed_contains": [
+      "Sale Rejected!",
+      "Total Medicines Processed: 1",
+      "Total Pharmacy Revenue: Rs. 0.00",
+      "Medicines Requiring Restocking: 1"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P10",
+    "task": "P",
+    "scenario": "Zero unit price",
+    "inputs": [
+      "1",
+      "M1",
+      "12",
+      "0",
+      "2"
+    ],
+    "required_result": "Accept zero-value sale; 10 left",
+    "observed_contains": [
+      "Sale Successful!",
+      "Remaining Stock: 10",
+      "Total Medicines Processed: 1",
+      "Total Pharmacy Revenue: Rs. 0.00",
+      "Medicines Requiring Restocking: 0"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P11",
+    "task": "P",
+    "scenario": "Decimal unit price",
+    "inputs": [
+      "1",
+      "M1",
+      "20",
+      "2.75",
+      "2"
+    ],
+    "required_result": "Rs. 5.50; 18 left",
+    "observed_contains": [
+      "Sale Successful!",
+      "Remaining Stock: 18",
+      "Total Medicines Processed: 1",
+      "Total Pharmacy Revenue: Rs. 5.50",
+      "Medicines Requiring Restocking: 0"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P12",
+    "task": "P",
+    "scenario": "Zero medicine count",
+    "inputs": [
+      "0"
+    ],
+    "required_result": "Display invalid-count message; no final report",
+    "observed_contains": [
+      "Invalid number of medicines."
+    ],
+    "observed_absent": [
+      "FINAL PHARMACY REPORT"
+    ],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P13",
+    "task": "P",
+    "scenario": "Negative medicine count",
+    "inputs": [
+      "-1"
+    ],
+    "required_result": "Display invalid-count message; no final report",
+    "observed_contains": [
+      "Invalid number of medicines."
+    ],
+    "observed_absent": [
+      "FINAL PHARMACY REPORT"
+    ],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P14",
+    "task": "P",
+    "scenario": "Non-numeric medicine count",
+    "inputs": [
+      "abc"
+    ],
+    "required_result": "Clear input-validation message",
+    "observed_contains": [],
+    "observed_absent": [],
+    "error": "ValueError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "P15",
+    "task": "P",
+    "scenario": "Fractional medicine count",
+    "inputs": [
+      "2.5"
+    ],
+    "required_result": "Clear input-validation message",
+    "observed_contains": [],
+    "observed_absent": [],
+    "error": "ValueError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "P16",
+    "task": "P",
+    "scenario": "Empty medicine count",
+    "inputs": [
+      ""
+    ],
+    "required_result": "Clear input-validation message",
+    "observed_contains": [],
+    "observed_absent": [],
+    "error": "ValueError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "P17",
+    "task": "P",
+    "scenario": "Empty medicine name",
+    "inputs": [
+      "1",
+      "",
+      "20",
+      "5",
+      "2"
+    ],
+    "required_result": "Skip invalid record; all totals zero",
+    "observed_contains": [
+      "Invalid medicine information. Skipping this medicine.",
+      "Total Medicines Processed: 0",
+      "Total Pharmacy Revenue: Rs. 0.00",
+      "Medicines Requiring Restocking: 0"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P18",
+    "task": "P",
+    "scenario": "Whitespace-only medicine name",
+    "inputs": [
+      "1",
+      "   ",
+      "20",
+      "5",
+      "2"
+    ],
+    "required_result": "Strip name and skip; all totals zero",
+    "observed_contains": [
+      "Invalid medicine information. Skipping this medicine.",
+      "Total Medicines Processed: 0",
+      "Total Pharmacy Revenue: Rs. 0.00",
+      "Medicines Requiring Restocking: 0"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P19",
+    "task": "P",
+    "scenario": "Negative available stock",
+    "inputs": [
+      "1",
+      "M1",
+      "-1",
+      "5",
+      "2"
+    ],
+    "required_result": "Skip record; all totals zero",
+    "observed_contains": [
+      "Invalid medicine information. Skipping this medicine.",
+      "Total Medicines Processed: 0",
+      "Total Pharmacy Revenue: Rs. 0.00",
+      "Medicines Requiring Restocking: 0"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P20",
+    "task": "P",
+    "scenario": "Negative unit price",
+    "inputs": [
+      "1",
+      "M1",
+      "20",
+      "-0.01",
+      "2"
+    ],
+    "required_result": "Skip record; all totals zero",
+    "observed_contains": [
+      "Invalid medicine information. Skipping this medicine.",
+      "Total Medicines Processed: 0",
+      "Total Pharmacy Revenue: Rs. 0.00",
+      "Medicines Requiring Restocking: 0"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P21",
+    "task": "P",
+    "scenario": "Negative requested quantity",
+    "inputs": [
+      "1",
+      "M1",
+      "20",
+      "5",
+      "-1"
+    ],
+    "required_result": "Skip record; all totals zero",
+    "observed_contains": [
+      "Invalid medicine information. Skipping this medicine.",
+      "Total Medicines Processed: 0",
+      "Total Pharmacy Revenue: Rs. 0.00",
+      "Medicines Requiring Restocking: 0"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P22",
+    "task": "P",
+    "scenario": "Several invalid fields together",
+    "inputs": [
+      "1",
+      "",
+      "-2",
+      "-1",
+      "-2"
+    ],
+    "required_result": "Skip record once; all totals zero",
+    "observed_contains": [
+      "Invalid medicine information. Skipping this medicine.",
+      "Total Medicines Processed: 0",
+      "Total Pharmacy Revenue: Rs. 0.00",
+      "Medicines Requiring Restocking: 0"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P23",
+    "task": "P",
+    "scenario": "Skip then continue to valid record",
+    "inputs": [
+      "2",
+      "",
+      "20",
+      "5",
+      "2",
+      "M2",
+      "20",
+      "10",
+      "2"
+    ],
+    "required_result": "Process second record; Rs. 20.00; 0 restock",
+    "observed_contains": [
+      "Invalid medicine information. Skipping this medicine.",
+      "Medicine: M2",
+      "Total Medicines Processed: 1",
+      "Total Pharmacy Revenue: Rs. 20.00",
+      "Medicines Requiring Restocking: 0"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P24",
+    "task": "P",
+    "scenario": "Rejected then accepted sale",
+    "inputs": [
+      "2",
+      "M1",
+      "8",
+      "5",
+      "9",
+      "M2",
+      "20",
+      "10",
+      "2"
+    ],
+    "required_result": "Count both valid records; Rs. 20.00; 1 restock",
+    "observed_contains": [
+      "Sale Rejected!",
+      "Sale Successful!",
+      "Total Medicines Processed: 2",
+      "Total Pharmacy Revenue: Rs. 20.00",
+      "Medicines Requiring Restocking: 1"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P25",
+    "task": "P",
+    "scenario": "Existing low stock and no sale",
+    "inputs": [
+      "1",
+      "M1",
+      "9",
+      "5",
+      "0"
+    ],
+    "required_result": "Zero revenue; 9 left; 1 restock",
+    "observed_contains": [
+      "Remaining Stock: 9",
+      "Total Medicines Processed: 1",
+      "Total Pharmacy Revenue: Rs. 0.00",
+      "Medicines Requiring Restocking: 1"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P26",
+    "task": "P",
+    "scenario": "Remaining stock of eleven",
+    "inputs": [
+      "1",
+      "M1",
+      "12",
+      "5",
+      "1"
+    ],
+    "required_result": "Rs. 5.00; 11 left; no restock",
+    "observed_contains": [
+      "Remaining Stock: 11",
+      "Total Medicines Processed: 1",
+      "Total Pharmacy Revenue: Rs. 5.00",
+      "Medicines Requiring Restocking: 0"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P27",
+    "task": "P",
+    "scenario": "Remaining stock of exactly ten",
+    "inputs": [
+      "1",
+      "M1",
+      "12",
+      "5",
+      "2"
+    ],
+    "required_result": "Rs. 10.00; 10 left; no restock",
+    "observed_contains": [
+      "Remaining Stock: 10",
+      "Total Medicines Processed: 1",
+      "Total Pharmacy Revenue: Rs. 10.00",
+      "Medicines Requiring Restocking: 0"
+    ],
+    "observed_absent": [
+      "WARNING:"
+    ],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P28",
+    "task": "P",
+    "scenario": "Large integer quantity",
+    "inputs": [
+      "1",
+      "M1",
+      "1000000000",
+      "1",
+      "1000000000"
+    ],
+    "required_result": "Rs. 1000000000.00; 0 left; 1 restock",
+    "observed_contains": [
+      "Total Medicines Processed: 1",
+      "Total Pharmacy Revenue: Rs. 1000000000.00",
+      "Medicines Requiring Restocking: 1"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P29",
+    "task": "P",
+    "scenario": "Fractional stock",
+    "inputs": [
+      "1",
+      "M1",
+      "3.5"
+    ],
+    "required_result": "Reject or skip without crashing",
+    "observed_contains": [],
+    "observed_absent": [],
+    "error": "ValueError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "P30",
+    "task": "P",
+    "scenario": "Non-numeric stock",
+    "inputs": [
+      "1",
+      "M1",
+      "abc"
+    ],
+    "required_result": "Reject or skip without crashing",
+    "observed_contains": [],
+    "observed_absent": [],
+    "error": "ValueError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "P31",
+    "task": "P",
+    "scenario": "Non-numeric unit price",
+    "inputs": [
+      "1",
+      "M1",
+      "20",
+      "abc"
+    ],
+    "required_result": "Reject or skip without crashing",
+    "observed_contains": [],
+    "observed_absent": [],
+    "error": "ValueError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "P32",
+    "task": "P",
+    "scenario": "Fractional sale quantity",
+    "inputs": [
+      "1",
+      "M1",
+      "20",
+      "5",
+      "1.5"
+    ],
+    "required_result": "Reject or skip without crashing",
+    "observed_contains": [],
+    "observed_absent": [],
+    "error": "ValueError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "P33",
+    "task": "P",
+    "scenario": "Non-numeric sale quantity",
+    "inputs": [
+      "1",
+      "M1",
+      "20",
+      "5",
+      "abc"
+    ],
+    "required_result": "Reject or skip without crashing",
+    "observed_contains": [],
+    "observed_absent": [],
+    "error": "ValueError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "P34",
+    "task": "P",
+    "scenario": "NaN unit price",
+    "inputs": [
+      "1",
+      "M1",
+      "20",
+      "nan",
+      "1"
+    ],
+    "required_result": "Reject a non-finite unit price",
+    "observed_contains": [
+      "Sale Successful!",
+      "Total Medicines Processed: 1",
+      "Total Pharmacy Revenue: Rs. nan",
+      "Medicines Requiring Restocking: 0"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "P35",
+    "task": "P",
+    "scenario": "Infinite unit price",
+    "inputs": [
+      "1",
+      "M1",
+      "20",
+      "inf",
+      "1"
+    ],
+    "required_result": "Reject a non-finite unit price",
+    "observed_contains": [
+      "Sale Successful!",
+      "Total Medicines Processed: 1",
+      "Total Pharmacy Revenue: Rs. inf",
+      "Medicines Requiring Restocking: 0"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "P36",
+    "task": "P",
+    "scenario": "Negative infinite price",
+    "inputs": [
+      "1",
+      "M1",
+      "20",
+      "-inf",
+      "1"
+    ],
+    "required_result": "Skip the invalid negative price",
+    "observed_contains": [
+      "Invalid medicine information. Skipping this medicine.",
+      "Total Medicines Processed: 0",
+      "Total Pharmacy Revenue: Rs. 0.00",
+      "Medicines Requiring Restocking: 0"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P37",
+    "task": "P",
+    "scenario": "Zero multiplied by infinite price",
+    "inputs": [
+      "1",
+      "M1",
+      "20",
+      "inf",
+      "0"
+    ],
+    "required_result": "Reject a non-finite unit price",
+    "observed_contains": [
+      "Sale Successful!",
+      "Total Medicines Processed: 1",
+      "Total Pharmacy Revenue: Rs. nan",
+      "Medicines Requiring Restocking: 0"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "P38",
+    "task": "P",
+    "scenario": "Revenue overflows float range",
+    "inputs": [
+      "1",
+      "M1",
+      "2",
+      "1e308",
+      "2"
+    ],
+    "required_result": "Keep revenue finite or report a validation error",
+    "observed_contains": [
+      "Sale Successful!",
+      "Total Medicines Processed: 1",
+      "Total Pharmacy Revenue: Rs. inf",
+      "Medicines Requiring Restocking: 1"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "P39",
+    "task": "P",
+    "scenario": "All records skipped",
+    "inputs": [
+      "3",
+      "",
+      "20",
+      "5",
+      "2",
+      "M2",
+      "-1",
+      "5",
+      "2",
+      "M3",
+      "20",
+      "5",
+      "-1"
+    ],
+    "required_result": "0 processed; 0 revenue; 0 restock",
+    "observed_contains": [
+      "Total Medicines Processed: 0",
+      "Total Pharmacy Revenue: Rs. 0.00",
+      "Medicines Requiring Restocking: 0"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P40",
+    "task": "P",
+    "scenario": "Duplicate names are independent entries",
+    "inputs": [
+      "2",
+      "M1",
+      "20",
+      "5",
+      "2",
+      "M1",
+      "20",
+      "5",
+      "2"
+    ],
+    "required_result": "2 valid records; Rs. 20.00; 0 restock",
+    "observed_contains": [
+      "Total Medicines Processed: 2",
+      "Total Pharmacy Revenue: Rs. 20.00",
+      "Medicines Requiring Restocking: 0"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  },
+  {
+    "id": "P41",
+    "task": "P",
+    "scenario": "Comma-formatted unit price",
+    "inputs": [
+      "1",
+      "M1",
+      "20",
+      "1,000"
+    ],
+    "required_result": "Clear input-validation message",
+    "observed_contains": [],
+    "observed_absent": [],
+    "error": "ValueError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "P42",
+    "task": "P",
+    "scenario": "Blank name plus malformed price",
+    "inputs": [
+      "1",
+      "",
+      "20",
+      "abc"
+    ],
+    "required_result": "Skip invalid entry without crashing",
+    "observed_contains": [],
+    "observed_absent": [],
+    "error": "ValueError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "P43",
+    "task": "P",
+    "scenario": "Malformed first record halts loop",
+    "inputs": [
+      "2",
+      "M1",
+      "abc",
+      "M2",
+      "20",
+      "10",
+      "2"
+    ],
+    "required_result": "Reject malformed record and continue",
+    "observed_contains": [],
+    "observed_absent": [],
+    "error": "ValueError",
+    "requirement_status": "FINDING"
+  },
+  {
+    "id": "P44",
+    "task": "P",
+    "scenario": "Two low-stock records",
+    "inputs": [
+      "2",
+      "M1",
+      "9",
+      "5",
+      "0",
+      "M2",
+      "8",
+      "5",
+      "9"
+    ],
+    "required_result": "2 processed; 0 revenue; 2 restock",
+    "observed_contains": [
+      "Sale Successful!",
+      "Sale Rejected!",
+      "Total Medicines Processed: 2",
+      "Total Pharmacy Revenue: Rs. 0.00",
+      "Medicines Requiring Restocking: 2"
+    ],
+    "observed_absent": [],
+    "error": null,
+    "requirement_status": "PASS"
+  }
+]

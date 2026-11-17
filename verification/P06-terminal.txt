@@ -1,0 +1,19 @@
+========== SMART PHARMACY SYSTEM ==========
+How many medicines do you want to process? 1
+========== MEDICINE 1 ==========
+Enter medicine name: Augmentin
+Enter available stock: 8
+Enter price per unit (Rs.): 200
+Enter quantity sold: 12
+
+Sale Rejected!
+Reason: Insufficient stock.
+Available Stock: 8
+Requested Quantity: 12
+WARNING: Augmentin requires restocking!
+
+========== FINAL PHARMACY REPORT ==========
+Total Medicines Processed: 1
+Total Pharmacy Revenue: Rs. 0.00
+Medicines Requiring Restocking: 1
+=================================================

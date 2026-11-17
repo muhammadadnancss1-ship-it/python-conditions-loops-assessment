@@ -1,0 +1,85 @@
+id,scenario,inputs,required_result,requirement_status,exit_code,observed_error,observation_check
+S01,Normal full award,"[""Test Student"", ""95"", ""90"", ""40000""]",Full award,PASS,0,,PASS
+S02,Full-award boundary,"[""Test Student"", ""90"", ""85"", ""50000""]",Full award at inclusive limits,PASS,0,,PASS
+S03,Decimal partial award,"[""Test Student"", ""89.5"", ""85"", ""50000""]",Partial award,PASS,0,,PASS
+S04,Minimum eligibility limits,"[""Test Student"", ""80"", ""85"", ""50000""]",Partial award,PASS,0,,PASS
+S05,Zero income is valid,"[""Test Student"", ""100"", ""100"", ""0""]",Full award without an income-failure reason,FINDING,0,,PASS
+S06,Marks fail alone,"[""Test Student"", ""79.99"", ""90"", ""30000""]",Reject and explain low marks,FINDING,0,,PASS
+S07,Attendance fails alone,"[""Test Student"", ""90"", ""84.99"", ""30000""]",Reject and explain low attendance,FINDING,0,,PASS
+S08,Income fails alone,"[""Test Student"", ""95"", ""90"", ""50000.01""]",Reject and explain excessive income,FINDING,1,NameError,PASS
+S09,Marks and attendance fail,"[""Test Student"", ""70"", ""70"", ""40000""]",Reject and explain both failures,FINDING,0,,PASS
+S10,All eligibility rules fail,"[""Test Student"", ""70"", ""70"", ""60000""]",Reject and explain all three failures,FINDING,1,NameError,PASS
+S11,Zero marks,"[""Test Student"", ""0"", ""90"", ""20000""]",Reject with a low-marks reason,PASS,0,,PASS
+S12,Zero attendance,"[""Test Student"", ""90"", ""0"", ""20000""]",Reject with a low-attendance reason,PASS,0,,PASS
+S13,All numeric inputs zero,"[""Test Student"", ""0"", ""0"", ""0""]",Reject for marks and attendance only,FINDING,0,,PASS
+S14,Marks below zero,"[""Test Student"", ""-0.01"", ""90"", ""30000""]",Validation message without crashing,FINDING,1,NameError,PASS
+S15,Marks above 100,"[""Test Student"", ""100.01"", ""90"", ""30000""]",Validation message without crashing,FINDING,1,NameError,PASS
+S16,Attendance below zero,"[""Test Student"", ""90"", ""-0.01"", ""30000""]",Validation message without crashing,FINDING,1,NameError,PASS
+S17,Attendance above 100,"[""Test Student"", ""90"", ""100.01"", ""30000""]",Reject out-of-range attendance,FINDING,0,,PASS
+S18,Negative family income,"[""Test Student"", ""90"", ""90"", ""-0.01""]",Validation message without crashing,FINDING,1,NameError,PASS
+S19,Empty student name,"["""", ""90"", ""90"", ""30000""]",Reject a blank name,FINDING,0,,PASS
+S20,Whitespace-only name,"[""   "", ""90"", ""90"", ""30000""]",Reject a whitespace-only name,FINDING,0,,PASS
+S21,Non-numeric marks,"[""Test Student"", ""abc""]",Clear input-validation message,FINDING,1,ValueError,PASS
+S22,Non-numeric attendance,"[""Test Student"", ""90"", ""abc""]",Clear input-validation message,FINDING,1,ValueError,PASS
+S23,Non-numeric income,"[""Test Student"", ""90"", ""90"", ""abc""]",Clear input-validation message,FINDING,1,ValueError,PASS
+S24,Empty marks,"[""Test Student"", """"]",Clear input-validation message,FINDING,1,ValueError,PASS
+S25,Empty attendance,"[""Test Student"", ""90"", """"]",Clear input-validation message,FINDING,1,ValueError,PASS
+S26,Empty income,"[""Test Student"", ""90"", ""90"", """"]",Clear input-validation message,FINDING,1,ValueError,PASS
+S27,NaN marks,"[""Test Student"", ""nan"", ""90"", ""30000""]",Reject non-finite marks,FINDING,0,,PASS
+S28,Infinite marks,"[""Test Student"", ""inf"", ""90"", ""30000""]",Reject non-finite marks without crashing,FINDING,1,NameError,PASS
+S29,NaN attendance,"[""Test Student"", ""90"", ""nan"", ""30000""]",Reject non-finite attendance,FINDING,0,,PASS
+S30,Infinite attendance,"[""Test Student"", ""90"", ""inf"", ""30000""]",Reject non-finite attendance,FINDING,0,,PASS
+S31,NaN income,"[""Test Student"", ""90"", ""90"", ""nan""]",Reject non-finite income,FINDING,0,,PASS
+S32,Infinite income,"[""Test Student"", ""90"", ""90"", ""inf""]",Reject non-finite income without crashing,FINDING,1,NameError,PASS
+S33,Negative infinite attendance,"[""Test Student"", ""90"", ""-inf"", ""30000""]",Reject non-finite attendance without crashing,FINDING,1,NameError,PASS
+S34,Rounding below marks threshold,"[""Test Student"", ""79.9999"", ""90"", ""30000""]",Reject using the unrounded marks and explain why,FINDING,0,,PASS
+S35,Rounding below full-award threshold,"[""Test Student"", ""89.9999"", ""90"", ""30000""]",Partial award based on the unrounded value,PASS,0,,PASS
+S36,Unicode student name,"[""علی"", ""92"", ""90"", ""30000""]",Full award and preserve the name,PASS,0,,PASS
+S37,Upper percentage limits,"[""Test Student"", ""100"", ""100"", ""50000""]",Full award,PASS,0,,PASS
+S38,Small positive family income,"[""Test Student"", ""90"", ""85"", ""0.01""]",Full award,PASS,0,,PASS
+S39,Low marks plus zero attendance,"[""Test Student"", ""75"", ""0"", ""30000""]",Explain both failed criteria,FINDING,0,,PASS
+S40,Leading and trailing spaces in numeric input,"[""Test Student"", "" 90 "", "" 85 "", "" 50000 ""]",Parse numeric whitespace; full award,PASS,0,,PASS
+P01,Normal accepted sale,"[""1"", ""Panadol"", ""50"", ""150"", ""10""]",Rs. 1500.00; 40 left; 1 processed; 0 restock,PASS,0,,PASS
+P02,Five-medicine revenue total,"[""5"", ""penadol"", ""50"", ""150"", ""10"", ""Mogral"", ""50"", ""300"", ""5"", ""dawtor"", ""56"", ""200"", ""9"", ""baydall"", ""10"", ""20"", ""3"", ""extore"", ""45"", ""23"", ""25""]",5 processed; Rs. 5435.00; 1 restock,PASS,0,,PASS
+P03,Zero sale at the stock limit,"[""1"", ""M1"", ""10"", ""20"", ""0""]",Zero revenue; 10 left; no warning,PASS,0,,PASS
+P04,Remaining stock of nine,"[""1"", ""M1"", ""10"", ""20"", ""1""]",Rs. 20.00; 9 left; 1 restock,PASS,0,,PASS
+P05,Sell the entire stock,"[""1"", ""M1"", ""10"", ""20"", ""10""]",Rs. 200.00; 0 left; 1 restock,PASS,0,,PASS
+P06,Rejected sale with low stock,"[""1"", ""Augmentin"", ""8"", ""200"", ""12""]",Reject; retain 8 units; 0 revenue; 1 restock,PASS,0,,PASS
+P07,Rejected sale with sufficient reserve,"[""1"", ""M1"", ""20"", ""2"", ""21""]",Reject; 20 retained; no restock,PASS,0,,PASS
+P08,Zero stock and zero request,"[""1"", ""M1"", ""0"", ""10"", ""0""]",Accept zero sale; warn about zero stock,PASS,0,,PASS
+P09,Zero stock and positive request,"[""1"", ""M1"", ""0"", ""10"", ""1""]",Reject; 0 revenue; 1 restock,PASS,0,,PASS
+P10,Zero unit price,"[""1"", ""M1"", ""12"", ""0"", ""2""]",Accept zero-value sale; 10 left,PASS,0,,PASS
+P11,Decimal unit price,"[""1"", ""M1"", ""20"", ""2.75"", ""2""]",Rs. 5.50; 18 left,PASS,0,,PASS
+P12,Zero medicine count,"[""0""]",Display invalid-count message; no final report,PASS,0,,PASS
+P13,Negative medicine count,"[""-1""]",Display invalid-count message; no final report,PASS,0,,PASS
+P14,Non-numeric medicine count,"[""abc""]",Clear input-validation message,FINDING,1,ValueError,PASS
+P15,Fractional medicine count,"[""2.5""]",Clear input-validation message,FINDING,1,ValueError,PASS
+P16,Empty medicine count,"[""""]",Clear input-validation message,FINDING,1,ValueError,PASS
+P17,Empty medicine name,"[""1"", """", ""20"", ""5"", ""2""]",Skip invalid record; all totals zero,PASS,0,,PASS
+P18,Whitespace-only medicine name,"[""1"", ""   "", ""20"", ""5"", ""2""]",Strip name and skip; all totals zero,PASS,0,,PASS
+P19,Negative available stock,"[""1"", ""M1"", ""-1"", ""5"", ""2""]",Skip record; all totals zero,PASS,0,,PASS
+P20,Negative unit price,"[""1"", ""M1"", ""20"", ""-0.01"", ""2""]",Skip record; all totals zero,PASS,0,,PASS
+P21,Negative requested quantity,"[""1"", ""M1"", ""20"", ""5"", ""-1""]",Skip record; all totals zero,PASS,0,,PASS
+P22,Several invalid fields together,"[""1"", """", ""-2"", ""-1"", ""-2""]",Skip record once; all totals zero,PASS,0,,PASS
+P23,Skip then continue to valid record,"[""2"", """", ""20"", ""5"", ""2"", ""M2"", ""20"", ""10"", ""2""]",Process second record; Rs. 20.00; 0 restock,PASS,0,,PASS
+P24,Rejected then accepted sale,"[""2"", ""M1"", ""8"", ""5"", ""9"", ""M2"", ""20"", ""10"", ""2""]",Count both valid records; Rs. 20.00; 1 restock,PASS,0,,PASS
+P25,Existing low stock and no sale,"[""1"", ""M1"", ""9"", ""5"", ""0""]",Zero revenue; 9 left; 1 restock,PASS,0,,PASS
+P26,Remaining stock of eleven,"[""1"", ""M1"", ""12"", ""5"", ""1""]",Rs. 5.00; 11 left; no restock,PASS,0,,PASS
+P27,Remaining stock of exactly ten,"[""1"", ""M1"", ""12"", ""5"", ""2""]",Rs. 10.00; 10 left; no restock,PASS,0,,PASS
+P28,Large integer quantity,"[""1"", ""M1"", ""1000000000"", ""1"", ""1000000000""]",Rs. 1000000000.00; 0 left; 1 restock,PASS,0,,PASS
+P29,Fractional stock,"[""1"", ""M1"", ""3.5""]",Reject or skip without crashing,FINDING,1,ValueError,PASS
+P30,Non-numeric stock,"[""1"", ""M1"", ""abc""]",Reject or skip without crashing,FINDING,1,ValueError,PASS
+P31,Non-numeric unit price,"[""1"", ""M1"", ""20"", ""abc""]",Reject or skip without crashing,FINDING,1,ValueError,PASS
+P32,Fractional sale quantity,"[""1"", ""M1"", ""20"", ""5"", ""1.5""]",Reject or skip without crashing,FINDING,1,ValueError,PASS
+P33,Non-numeric sale quantity,"[""1"", ""M1"", ""20"", ""5"", ""abc""]",Reject or skip without crashing,FINDING,1,ValueError,PASS
+P34,NaN unit price,"[""1"", ""M1"", ""20"", ""nan"", ""1""]",Reject a non-finite unit price,FINDING,0,,PASS
+P35,Infinite unit price,"[""1"", ""M1"", ""20"", ""inf"", ""1""]",Reject a non-finite unit price,FINDING,0,,PASS
+P36,Negative infinite price,"[""1"", ""M1"", ""20"", ""-inf"", ""1""]",Skip the invalid negative price,PASS,0,,PASS
+P37,Zero multiplied by infinite price,"[""1"", ""M1"", ""20"", ""inf"", ""0""]",Reject a non-finite unit price,FINDING,0,,PASS
+P38,Revenue overflows float range,"[""1"", ""M1"", ""2"", ""1e308"", ""2""]",Keep revenue finite or report a validation error,FINDING,0,,PASS
+P39,All records skipped,"[""3"", """", ""20"", ""5"", ""2"", ""M2"", ""-1"", ""5"", ""2"", ""M3"", ""20"", ""5"", ""-1""]",0 processed; 0 revenue; 0 restock,PASS,0,,PASS
+P40,Duplicate names are independent entries,"[""2"", ""M1"", ""20"", ""5"", ""2"", ""M1"", ""20"", ""5"", ""2""]",2 valid records; Rs. 20.00; 0 restock,PASS,0,,PASS
+P41,Comma-formatted unit price,"[""1"", ""M1"", ""20"", ""1,000""]",Clear input-validation message,FINDING,1,ValueError,PASS
+P42,Blank name plus malformed price,"[""1"", """", ""20"", ""abc""]",Skip invalid entry without crashing,FINDING,1,ValueError,PASS
+P43,Malformed first record halts loop,"[""2"", ""M1"", ""abc"", ""M2"", ""20"", ""10"", ""2""]",Reject malformed record and continue,FINDING,1,ValueError,PASS
+P44,Two low-stock records,"[""2"", ""M1"", ""9"", ""5"", ""0"", ""M2"", ""8"", ""5"", ""9""]",2 processed; 0 revenue; 2 restock,PASS,0,,PASS

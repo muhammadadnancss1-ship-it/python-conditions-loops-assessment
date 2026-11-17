@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1770" viewBox="0 0 1120 1770" role="img" aria-labelledby="title desc">
+<title id="title">Scholarship program flow — original source</title><desc id="desc">The actual procedural control flow, including input conversion failures, incomplete validation, report truthiness checks and unassigned scholorship errors. This program has no loop.</desc>
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#53647B"/></marker>
+<linearGradient id="banner-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ECF5FF"/><stop offset="0.58" stop-color="#F4F1FF"/><stop offset="1" stop-color="#E8F7F1"/></linearGradient>
+</defs>
+<rect width="1120" height="1770" fill="#FFFFFF"/>
+<text x="44" y="42" font-family="Arial, DejaVu Sans, sans-serif" font-size="12" fill="#1764D5" font-weight="700" text-anchor="start"><tspan x="44" dy="0">02 / TASK 1 FLOW</tspan></text>
+<text x="44" y="78" font-family="Arial, DejaVu Sans, sans-serif" font-size="28" fill="#16243B" font-weight="700" text-anchor="start"><tspan x="44" dy="0">Scholarship: the path through the code</tspan></text>
+<text x="44" y="108" font-family="Arial, DejaVu Sans, sans-serif" font-size="15" fill="#53647B" font-weight="400" text-anchor="start"><tspan x="44" dy="0">Single student per execution. Error paths show the behavior of the unchanged source.</tspan></text>
+<path d="M44 128 H1076" stroke="#DDE5EE" stroke-width="1"/>
+<rect x="385" y="160" width="350" height="48" rx="12" fill="#EDF8F1" stroke="#167249" stroke-width="1.5"/>
+<text x="560.0" y="189.78" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#16243B" font-weight="500" text-anchor="middle"><tspan x="560.0" dy="0">START</tspan></text>
+<rect x="280" y="242" width="560" height="78" rx="12" fill="#EDF5FF" stroke="#1764D5" stroke-width="1.5"/>
+<text x="560.0" y="274.71" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#16243B" font-weight="500" text-anchor="middle"><tspan x="560.0" dy="0">Read name, marks, attendance, income</tspan><tspan x="560.0" dy="24.14">Convert numeric inputs with float()</tspan></text>
+<polyline points="560,208 560,242" fill="none" stroke="#53647B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polygon points="560,348.0 755.0,400 560,452.0 365.0,400" fill="#F3EEFC" stroke="#7944C9" stroke-width="1.7"/>
+<text x="560.0" y="393.71" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#16243B" font-weight="500" text-anchor="middle"><tspan x="560.0" dy="0">Do numeric conversions</tspan><tspan x="560.0" dy="24.14">succeed?</tspan></text>
+<polyline points="560,320 560,348" fill="none" stroke="#53647B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="860" y="361" width="222" height="78" rx="12" fill="#FFF0F1" stroke="#BB343B" stroke-width="1.5"/>
+<text x="971.0" y="393.71" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#16243B" font-weight="500" text-anchor="middle"><tspan x="971.0" dy="0">ValueError</tspan><tspan x="971.0" dy="24.14">Program stops</tspan></text>
+<polyline points="755,400 860,400" fill="none" stroke="#53647B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="785" y="388" font-family="Arial, DejaVu Sans, sans-serif" font-size="14" fill="#53647B" font-weight="600" text-anchor="start"><tspan x="785" dy="0">No</tspan></text>
+<polygon points="560,495.0 825.0,603 560,711.0 295.0,603" fill="#F3EEFC" stroke="#7944C9" stroke-width="1.7"/>
+<text x="560.0" y="574.36" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#16243B" font-weight="500" text-anchor="middle"><tspan x="560.0" dy="0">Any validation branch fires?</tspan><tspan x="560.0" dy="22.72">Marks &lt; 0 or &gt; 100</tspan><tspan x="560.0" dy="22.72">Attendance &lt; 0</tspan><tspan x="560.0" dy="22.72">Income &lt; 0 or &gt; 50,000</tspan></text>
+<polyline points="560,452 560,495" fill="none" stroke="#53647B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="572" y="478" font-family="Arial, DejaVu Sans, sans-serif" font-size="14" fill="#53647B" font-weight="600" text-anchor="start"><tspan x="572" dy="0">Yes</tspan></text>
+<rect x="864" y="556" width="218" height="94" rx="12" fill="#FFF0F1" stroke="#BB343B" stroke-width="1.5"/>
+<text x="973.0" y="597.45" font-family="Arial, DejaVu Sans, sans-serif" font-size="15" fill="#16243B" font-weight="500" text-anchor="middle"><tspan x="973.0" dy="0">Print validation message</tspan><tspan x="973.0" dy="21.299999999999997">Skip award assignment</tspan></text>
+<polyline points="825,603 864,603" fill="none" stroke="#53647B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="834" y="585" font-family="Arial, DejaVu Sans, sans-serif" font-size="14" fill="#53647B" font-weight="600" text-anchor="start"><tspan x="834" dy="0">Yes</tspan></text>
+<polyline points="1082,603 1100,603 1100,1228 833,1228" fill="none" stroke="#53647B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="866" y="1213" font-family="Arial, DejaVu Sans, sans-serif" font-size="14" fill="#53647B" font-weight="600" text-anchor="start"><tspan x="866" dy="0">Continue to report</tspan></text>
+<polygon points="560,768.0 800.0,843 560,918.0 320.0,843" fill="#F3EEFC" stroke="#7944C9" stroke-width="1.7"/>
+<text x="560.0" y="824.64" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#16243B" font-weight="500" text-anchor="middle"><tspan x="560.0" dy="0">marks ≥ 80 AND</tspan><tspan x="560.0" dy="24.14">attendance ≥ 85 AND</tspan><tspan x="560.0" dy="24.14">income ≤ 50,000?</tspan></text>
+<polyline points="560,711 560,768" fill="none" stroke="#53647B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="571" y="747" font-family="Arial, DejaVu Sans, sans-serif" font-size="14" fill="#53647B" font-weight="600" text-anchor="start"><tspan x="571" dy="0">No</tspan></text>
+<rect x="47" y="802" width="230" height="82" rx="12" fill="#FFF0F1" stroke="#BB343B" stroke-width="1.5"/>
+<text x="162.0" y="836.7099999999999" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#16243B" font-weight="500" text-anchor="middle"><tspan x="162.0" dy="0">Set scholorship to</tspan><tspan x="162.0" dy="24.14">"Not elegible"</tspan></text>
+<polyline points="320,843 277,843" fill="none" stroke="#53647B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="285" y="830" font-family="Arial, DejaVu Sans, sans-serif" font-size="14" fill="#53647B" font-weight="600" text-anchor="start"><tspan x="285" dy="0">No</tspan></text>
+<polygon points="560,986.0 730.0,1040 560,1094.0 390.0,1040" fill="#F3EEFC" stroke="#7944C9" stroke-width="1.7"/>
+<text x="560.0" y="1045.78" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#16243B" font-weight="500" text-anchor="middle"><tspan x="560.0" dy="0">Marks ≥ 90?</tspan></text>
+<polyline points="560,918 560,986" fill="none" stroke="#53647B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="573" y="958" font-family="Arial, DejaVu Sans, sans-serif" font-size="14" fill="#53647B" font-weight="600" text-anchor="start"><tspan x="573" dy="0">Yes</tspan></text>
+<rect x="54" y="1003" width="282" height="74" rx="12" fill="#EDF8F1" stroke="#167249" stroke-width="1.5"/>
+<text x="195.0" y="1034.0800000000002" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#16243B" font-weight="500" text-anchor="middle"><tspan x="195.0" dy="0">Set scholorship to</tspan><tspan x="195.0" dy="22.72">"fully scholorship "</tspan></text>
+<rect x="782" y="1003" width="298" height="74" rx="12" fill="#EDF8F1" stroke="#167249" stroke-width="1.5"/>
+<text x="931.0" y="1034.0800000000002" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#16243B" font-weight="500" text-anchor="middle"><tspan x="931.0" dy="0">Set scholorship to</tspan><tspan x="931.0" dy="22.72">" partially scholorship"</tspan></text>
+<polyline points="390,1040 336,1040" fill="none" stroke="#53647B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="348" y="1028" font-family="Arial, DejaVu Sans, sans-serif" font-size="14" fill="#53647B" font-weight="600" text-anchor="start"><tspan x="348" dy="0">Yes</tspan></text>
+<polyline points="730,1040 782,1040" fill="none" stroke="#53647B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="748" y="1028" font-family="Arial, DejaVu Sans, sans-serif" font-size="14" fill="#53647B" font-weight="600" text-anchor="start"><tspan x="748" dy="0">No</tspan></text>
+<rect x="287" y="1173" width="546" height="110" rx="12" fill="#EDF5FF" stroke="#1764D5" stroke-width="1.5"/>
+<text x="560.0" y="1210.72" font-family="Arial, DejaVu Sans, sans-serif" font-size="16" fill="#16243B" font-weight="500" text-anchor="middle"><tspan x="560.0" dy="0">Print student report</tspan><tspan x="560.0" dy="22.72">Print reasons only for falsey raw values</tspan><tspan x="560.0" dy="22.72">(0 triggers a reason; threshold failures may not)</tspan></text>
+<polyline points="47,843 24,843 24,1228 287,1228" fill="none" stroke="#53647B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="195,1077 195,1148 560,1148 560,1173" fill="none" stroke="#53647B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="931,1077 931,1148 560,1148" fill="none" stroke="#53647B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polygon points="560,1345.0 760.0,1400 560,1455.0 360.0,1400" fill="#F3EEFC" stroke="#7944C9" stroke-width="1.7"/>
+<text x="560.0" y="1405.78" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#16243B" font-weight="500" text-anchor="middle"><tspan x="560.0" dy="0">Was scholorship assigned?</tspan></text>
+<polyline points="560,1283 560,1345" fill="none" stroke="#53647B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="860" y="1360" width="222" height="80" rx="12" fill="#FFF0F1" stroke="#BB343B" stroke-width="1.5"/>
+<text x="971.0" y="1393.71" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#16243B" font-weight="500" text-anchor="middle"><tspan x="971.0" dy="0">NameError</tspan><tspan x="971.0" dy="24.14">Program stops</tspan></text>
+<polyline points="760,1400 860,1400" fill="none" stroke="#53647B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="790" y="1388" font-family="Arial, DejaVu Sans, sans-serif" font-size="14" fill="#53647B" font-weight="600" text-anchor="start"><tspan x="790" dy="0">No</tspan></text>
+<rect x="325" y="1520" width="470" height="80" rx="12" fill="#EDF8F1" stroke="#167249" stroke-width="1.5"/>
+<text x="560.0" y="1553.71" font-family="Arial, DejaVu Sans, sans-serif" font-size="17" fill="#16243B" font-weight="500" text-anchor="middle"><tspan x="560.0" dy="0">Print nScholarship Result: …</tspan><tspan x="560.0" dy="24.14">END</tspan></text>
+<polyline points="560,1455 560,1520" fill="none" stroke="#53647B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="573" y="1495" font-family="Arial, DejaVu Sans, sans-serif" font-size="14" fill="#53647B" font-weight="600" text-anchor="start"><tspan x="573" dy="0">Yes</tspan></text>
+<rect x="43" y="1645" width="1034" height="53" rx="12" fill="#FFF6E5" stroke="#956113" stroke-width="1.5"/>
+<text x="560.0" y="1666.32" font-family="Arial, DejaVu Sans, sans-serif" font-size="14" fill="#16243B" font-weight="500" text-anchor="middle"><tspan x="560.0" dy="0">Validation checks academic_marks &gt; 100 twice; attendance &gt; 100 is never rejected.</tspan><tspan x="560.0" dy="19.88">The partial-award branch uses or; preceding eligibility checks constrain the reachable values.</tspan></text>
+<rect x="46" y="1723" width="11" height="11" rx="2" fill="#1764D5" stroke="#1764D5" stroke-width="0"/>
+<text x="64" y="1734" font-family="Arial, DejaVu Sans, sans-serif" font-size="13" fill="#53647B" font-weight="400" text-anchor="start"><tspan x="64" dy="0">Input / process</tspan></text>
+<rect x="239" y="1723" width="11" height="11" rx="2" fill="#7944C9" stroke="#7944C9" stroke-width="0"/>
+<text x="257" y="1734" font-family="Arial, DejaVu Sans, sans-serif" font-size="13" fill="#53647B" font-weight="400" text-anchor="start"><tspan x="257" dy="0">Decision</tspan></text>
+<rect x="383" y="1723" width="11" height="11" rx="2" fill="#167249" stroke="#167249" stroke-width="0"/>
+<text x="401" y="1734" font-family="Arial, DejaVu Sans, sans-serif" font-size="13" fill="#53647B" font-weight="400" text-anchor="start"><tspan x="401" dy="0">Success</tspan></text>
+<rect x="519" y="1723" width="11" height="11" rx="2" fill="#BB343B" stroke="#BB343B" stroke-width="0"/>
+<text x="537" y="1734" font-family="Arial, DejaVu Sans, sans-serif" font-size="13" fill="#53647B" font-weight="400" text-anchor="start"><tspan x="537" dy="0">Error / rejection</tspan></text>
+<rect x="709" y="1723" width="11" height="11" rx="2" fill="#956113" stroke="#956113" stroke-width="0"/>
+<text x="727" y="1734" font-family="Arial, DejaVu Sans, sans-serif" font-size="13" fill="#53647B" font-weight="400" text-anchor="start"><tspan x="727" dy="0">Warning</tspan></text>
+</svg>

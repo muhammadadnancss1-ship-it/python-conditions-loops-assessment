@@ -1,0 +1,59 @@
+========== SMART PHARMACY SYSTEM ==========
+How many medicines do you want to process? 5
+========== MEDICINE 1 ==========
+Enter medicine name: penadol
+Enter available stock: 50
+Enter price per unit (Rs.): 150
+Enter quantity sold: 10
+
+Sale Successful!
+Medicine: penadol
+Sales Amount: Rs. 1500.00
+Remaining Stock: 40
+========== MEDICINE 2 ==========
+Enter medicine name: Mogral
+Enter available stock: 50
+Enter price per unit (Rs.): 300
+Enter quantity sold: 5
+
+Sale Successful!
+Medicine: Mogral
+Sales Amount: Rs. 1500.00
+Remaining Stock: 45
+========== MEDICINE 3 ==========
+Enter medicine name: dawtor
+Enter available stock: 56
+Enter price per unit (Rs.): 200
+Enter quantity sold: 9
+
+Sale Successful!
+Medicine: dawtor
+Sales Amount: Rs. 1800.00
+Remaining Stock: 47
+========== MEDICINE 4 ==========
+Enter medicine name: baydall
+Enter available stock: 10
+Enter price per unit (Rs.): 20
+Enter quantity sold: 3
+
+Sale Successful!
+Medicine: baydall
+Sales Amount: Rs. 60.00
+Remaining Stock: 7
+WARNING: baydall requires restocking!
+========== MEDICINE 5 ==========
+Enter medicine name: extore
+Enter available stock: 45
+Enter price per unit (Rs.): 23
+Enter quantity sold: 25
+
+Sale Successful!
+Medicine: extore
+Sales Amount: Rs. 575.00
+Remaining Stock: 20
+
+========== FINAL PHARMACY REPORT ==========
+Total Medicines Processed: 5
+Total Pharmacy Revenue: Rs. 5435.00
+Medicines Requiring Restocking: 1
+=================================================
