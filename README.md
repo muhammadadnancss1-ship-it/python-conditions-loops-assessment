@@ -594,4 +594,4 @@ The runner checks source hashes, compiles both programs in memory and executes e
 
 ---
 
-**Author:** YOUR NAME · **GitHub:** [YOUR_USERNAME](https://github.com/YOUR_USERNAME)
+**Author:** Muhammad Adnan · https://github.com/muhammadadnancss1-ship-it
